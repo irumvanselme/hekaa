@@ -10,8 +10,6 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:1.15
+CMD [ "yarn", "start" ]
 
-COPY /build/ /usr/share/nginx/html
-
-EXPOSE 80
+EXPOSE 3000

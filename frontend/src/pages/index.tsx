@@ -5,8 +5,8 @@ export default function Home() {
 
   useEffect(() => {
     (async function () {
-      let { data: apps } = await axios.get("http://localhost:8000/api/v1/apps")
-      console.log(apps)
+      let res = await axios.get("/api/v1/apps")
+      console.log(res)
     })()
   }, [])
 
